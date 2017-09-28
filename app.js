@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-app.get('/index', index.viewIndex);
+app.get('/', index.viewIndex);
 app.post('/add', add.add);
 
 http.createServer(app).listen(app.get('port'), function(){
