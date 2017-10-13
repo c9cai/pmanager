@@ -5,7 +5,8 @@ var firebase = require('../routes/firebase').firebase;
 exports.add = function(req,res) {
 	//console.log(req.body);
 	var body = req.body;
-	saveData(body.address, body.tname, body.mrent, body.pdate);
+	var address = body.address;
+	if (address != "") saveData(address, body.tname, body.mrent, body.pdate);
 	res.redirect('/');
 }
 

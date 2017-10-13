@@ -75,8 +75,10 @@
             <tr>
                 <td>{{@index}}</td>
                 <td>
-                  <div>Address: {{address}}<br> Tennant Name: {{name}}<br> Purchase Date: {{pdate}}<br> Monthly Rent: {{rent}}</div>
-                    <button class="rentHistBtn" type="button" onclick="rentHist({{@index}})">See Rent History</button>
+                  <div><strong>{{address}}</strong></div>
+                  <div id="{{address}}info" style="display: none;">Tennant Name: {{name}}<br> Purchase Date: {{pdate}}<br> Monthly Rent: {{rent}}</div>
+                  <button type="button" onclick="showInfo('{{address}}info')">Info</button>
+                  <button class="rentHistBtn" type="button" onclick="rentHist({{@index}})">Rent History</button>
                 </td>
                 <td>
                   <form id="{{address}}januaryform" method="post" action="/updateRent">
@@ -201,52 +203,53 @@
             </tr>
             <script>
               $(document).ready(function () {
-                if ({{january}}==true) {        
-                  $('#{{address}}january').prop('checked',true);
+                if ({{january}}==true) {  
+                  var s = "[id='{{address}}january']";     
+                  $(s).prop('checked',true);
                 } 
                 if ({{february}}==true) {
-                 
-                  $('#{{address}}february').prop('checked',true);
+                  var s = "[id='{{address}}february']"; 
+                  $(s).prop('checked',true);
                 }
                 if ({{march}}==true) {
-                 
-                  $('#{{address}}march').prop('checked',true);
+                  var s = "[id='{{address}}march']"; 
+                  $(s).prop('checked',true);
                 }
                 if ({{april}}==true) {
-                 
-                  $('#{{address}}april').prop('checked',true);
+                  var s = "[id='{{address}}april']"; 
+                  $(s).prop('checked',true);
                 }
                 if ({{may}}==true) {
-                 
-                  $('#{{address}}may').prop('checked',true);
+                  var s = "[id='{{address}}may']"; 
+                  $(s).prop('checked',true);
                 }
                 if ({{june}}==true) {
-                 
-                  $('#{{address}}june').prop('checked',true);
+                  var s = "[id='{{address}}june']"; 
+                  $(s).prop('checked',true);
                 }
                 if ({{july}}==true) {
-                 
-                  $('#{{address}}july').prop('checked',true);
+                  var s = "[id='{{address}}july']"; 
+                  $(s).prop('checked',true);
                 }
                 if ({{august}}==true) {
-                 
-                  $('#{{address}}august').prop('checked',true);
+                  var s = "[id='{{address}}august']"; 
+                  $(s).prop('checked',true);
                 }
                 if ({{september}}==true) {
-                 
-                  $('#{{address}}september').prop('checked',true);
+                  var s = "[id='{{address}}september']"; 
+                  $(s).prop('checked',true);
                 }
                 if ({{october}}==true) {
-                 
-                  $('#{{address}}october').prop('checked',true);
+                  var s = "[id='{{address}}october']"; 
+                  $(s).prop('checked',true);
                 }
                 if ({{november}}==true) {
-                 
-                  $('#{{address}}november').prop('checked',true);
+                  var s = "[id='{{address}}november']"; 
+                  $(s).prop('checked',true);
                 }
                 if ({{december}}==true) {
-                 
-                  $('#{{address}}december').prop('checked',true);
+                  var s = "[id='{{address}}december']"; 
+                  $(s).prop('checked',true);
                 }
               });       
             </script>
