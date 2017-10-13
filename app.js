@@ -22,6 +22,7 @@ app.use(bodyParser.json());
 
 app.get('/', index.viewIndex);
 app.post('/add', add.add);
+app.post('/updateRent', add.updateRent);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

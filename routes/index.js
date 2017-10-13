@@ -8,9 +8,9 @@ ref.on("value", function(snapshot) {
 });
 
 exports.viewIndex = function(req,res) {
-	console.log(propdata);
+	//console.log(propdata);
 	var rendData = {};
 	rendData['prop'] = propdata;
-	console.log(rendData);
+	//console.log(rendData);
 	res.render('index',rendData);
 }
